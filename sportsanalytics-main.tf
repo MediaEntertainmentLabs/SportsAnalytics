@@ -1,3 +1,11 @@
+provider "azurerm" {
+  features {
+    key_vault {
+      purge_soft_delete_on_destroy = true
+    }
+  }
+}
+
 #Azure Resource Group
 resource "azurerm_resource_group" "SportsAnalyticsRG" {
   name     = var.SportsAnalyticsRG

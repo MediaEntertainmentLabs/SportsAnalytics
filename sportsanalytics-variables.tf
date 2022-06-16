@@ -1,14 +1,6 @@
 #Some of the default values are case sensitive
 #You will have to pick a global unique name for your Azure Datalake Storage Account. Default value may be taken. 
 
-provider "azurerm" {
-  features {
-    key_vault {
-      purge_soft_delete_on_destroy = true
-    }
-  }
-}
-
 data "azurerm_client_config" "current" {}
 
 #Variables for Azure Resource Group
